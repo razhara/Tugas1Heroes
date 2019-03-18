@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd 
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="weap1" class="com.rimba.weapons.Sword"></bean>
+	<bean id="weap2" class="com.rimba.weapons.Gun"></bean>
+	<bean id="weap3" class="com.rimba.weapons.MagicStaff"></bean>
+
+	<bean id="tank1" class="com.rimba.heroes.TankHeroes">
+		<property name="name" value="Arthur"></property>
+		<property name="type" value="Knight"></property>
+		<property name="weapon" ref="weap1"></property>	
+	</bean>
+	
+	<bean id="gunman1" class="com.rimba.heroes.RangedHeroes">
+		<property name="name" value="Aruru"></property>
+		<property name="type" value="Pirate"></property>
+		<property name="weapon" ref="weap2"></property>	
+	</bean>
+	
+	<bean id="caster1" class="com.rimba.heroes.CasterHeroes">
+		<property name="name" value="Merlin"></property>
+		<property name="type" value="Sage"></property>
+		<property name="weapon" ref="weap3"></property>	
+	</bean>
+
+</beans>
